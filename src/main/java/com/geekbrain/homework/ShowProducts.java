@@ -1,7 +1,7 @@
 package com.geekbrain.homework;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +23,7 @@ public class ShowProducts extends HttpServlet {
             resp.getWriter().printf("<h3>Id: "+productList.get(i).getId()+" Title: "+productList.get(i).getTitle()+" Cost: "+productList.get(i).getCost()+" </h3>");
         }
         resp.getWriter().printf("</html></body>");
+        resp.getWriter().close();
     }
 
     @Override
